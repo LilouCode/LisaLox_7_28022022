@@ -1,0 +1,22 @@
+{
+    "name": "les-petits-plats",
+    "version": "1.0.2",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "sass": "sass --watch ./scss/main.scss:./css/style.css --style expanded",
+        "sass-compress": "sass --watch ./scss/main.scss:./css/style.css --style compressed",
+        "lint": "eslint --max-warnings=0 ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LilouCode/LisaLox_7_28022022"
+    },
+    "author": "",
+    "license": "UNLICENSED",
+    "private": true,
+    "devDependencies": {
+        "eslint": "^8.9.0",
+        "prettier": "^2.5.1"
+    }
+}
