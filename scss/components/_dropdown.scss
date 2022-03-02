@@ -1,0 +1,31 @@
+
+.dropdown{
+    width: 180px;
+    &__btn{
+        width: 170px;
+        height: 69px;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 5px; 
+        border: transparent;
+        color: white;
+        cursor: pointer;
+        background: url("../assets/arrow-down.svg") no-repeat right;
+        &:hover{
+            box-shadow: $shadow;
+        }
+        &--open{
+            background: url("../assets/arrow-up.svg") no-repeat right;
+        }
+    }
+}
+
+#dropdown-ingredients{
+    background-color: $blue;
+}
+#dropdown-appareils{
+    background-color: $red;
+}
+#dropdown-ustensiles{
+    background-color: $green;
+}

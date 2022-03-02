@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Les Petits Plats</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Trouvez les meilleures recettes de cuisine"/>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/png" href="./assets/favicon.svg"
+  />
+    <script src="./script/data/recipes.js" defer></script>
+    <script src="./script/utils/dropdown.js" defer></script>
+    <script src="./script/index.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <a href="index.html">
+              <img src="./assets/logo.svg" alt="Logo">
+            </a>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="search" class="search">
+            <div class="search__bar">
+                <input type="text" placeholder="Rechercher une recette">
+                <img src="./assets/search.svg" alt="search" role="button" onclick="">
+            </div>
+            <div class="search__tag">
+              <button class="tag tag--ingredients">
+                Coco
+              </button>
+            </div>
+
+            <div class="search__dropdowns">
+            
+              <div class="dropdown">
+                <button id="dropdown-ingredients" class="dropdown__btn" onclick="">
+                Ingrédients
+              </button>
+                <div id="content-ingredients" class="dropdown__content">
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button id="dropdown-appareils" class="dropdown__btn" onclick="">
+                  Appareils 
+
+                </button>
+                <div id="content-appareils" class="dropdown__content">
+                </div>
+              </div>
+            
+              <div class="dropdown">
+                <button id="dropdown-ustensiles" class="dropdown__btn" onclick="">
+                  Ustensiles 
+
+                </button>
+                <div id="content-ustensiles" class="dropdown__content">
+                </div>
+              </div>
+            </div>
+        </section>
+        <section id="grid">
+          <div>
+            <div class="card">
+              <img src="" alt="">
+              <div class="card__body">
+                <div class="card__header">
+                  <H2>Poisson cru à la tahitienne</H2>
+                  <h3>10 min</h3>
+                </div>
+                <div class="card__main">
+                  <ul class="card__article">
+                    <li>
+                      Thon Rouge (ou blanc): 200g
+                    </li>
+                    <li>
+                      Concombre: 1
+                    </li>
+                    <li>
+                      Tomate: 2
+                    </li>
+                    <li>
+                      Carotte: 1
+                    </li>
+                    <li>
+                      Citron vert: 5
+                    </li>
+                    <li>
+                      Lait de coco: 100ml
+                    </li>
+                  </ul>
+                  <p class="card__text">
+                    Découper le thon en dés, mettre dans un plat et recouvrir de jus de citron vert 
+                    (mieux vaut prendre un plat large et peu profond). Laisser reposer au réfrigérateur 
+                    au moins 2 heures. ...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+  </body>
+</html>

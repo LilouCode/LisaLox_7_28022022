@@ -1,3 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300;400;500;700&display=swap");
+.card {
+  width: 380px;
+  height: 364px;
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  height: 178px;
+  background-color: #C7BEBE;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 3%;
+  background-color: #E7E7E7;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+}
+.card__header h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.card__header h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.card__main {
+  display: flex;
+  font-size: 12px;
+}
+.card__article {
+  list-style: none;
+  width: 50%;
+  padding: 0;
+}
+.card__text {
+  font-family: "roboto", sans-serif;
+  flex: 50%;
+}
 
+.dropdown {
+  width: 180px;
+}
+.dropdown__btn {
+  width: 170px;
+  height: 69px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  cursor: pointer;
+  background: url("../assets/arrow-down.svg") no-repeat right;
+}
+.dropdown__btn:hover {
+  box-shadow: 2px 3px 2px 1px #C7BEBE;
+}
+.dropdown__btn--open {
+  background: url("../assets/arrow-up.svg") no-repeat right;
+}
+
+#dropdown-ingredients {
+  background-color: #3282F7;
+}
+
+#dropdown-appareils {
+  background-color: #ED6454;
+}
+
+#dropdown-ustensiles {
+  background-color: #68D9A4;
+}
+
+.tag {
+  height: 37px;
+  width: 107px;
+  font-family: 14px;
+  margin-top: 4%;
+  font-size: 700;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  background: url("../assets/close.svg") no-repeat right;
+}
+.tag--ingredients {
+  background-color: #3282F7;
+}
+.tag:hover {
+  box-shadow: 2px 3px 2px 1px #C7BEBE;
+}
+
+#grid {
+  margin: 4% 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+}
+.search__bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #E7E7E7;
+  height: 69px;
+  border-radius: 5px;
+}
+.search__bar:hover {
+  box-shadow: 2px 3px 2px 1px #C7BEBE;
+}
+.search__bar input {
+  background-color: transparent;
+  border: none;
+  width: 90%;
+  outline: none;
+}
+.search__bar img {
+  cursor: pointer;
+}
+.search__dropdowns {
+  display: flex;
+  margin-top: 4%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  padding: 3% 2% 2% 2%;
+}
+
+main {
+  margin: 0 9%;
+}
 
 /*# sourceMappingURL=style.css.map */

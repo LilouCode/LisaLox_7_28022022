@@ -1,0 +1,41 @@
+.card{
+    width: 380px;
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    & img{
+        height: 178px;
+        background-color: $linseed;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        padding: 2% 3%;
+        background-color: $grey;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        & h2{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        & h3{
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &__main{
+        display: flex;
+        font-size: 12px;
+    }
+    &__article{
+        list-style: none;
+        width: 50%;
+        padding: 0;
+    }
+    &__text{
+        font-family: "roboto", sans-serif;
+        flex: 50%;
+    }   
+}

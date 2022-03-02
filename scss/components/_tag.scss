@@ -1,0 +1,18 @@
+.tag{
+    height: 37px;
+    width: 107px;
+    font-family: 14px;
+    margin-top: 4%;
+    font-size: 700;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background: url("../assets/close.svg") no-repeat right;
+    &--ingredients{
+        background-color: $blue;
+    }
+    &:hover{
+        box-shadow: $shadow;
+    }
+}

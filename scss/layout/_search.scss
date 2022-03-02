@@ -1,0 +1,28 @@
+.search{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    &__bar{
+        display: flex;
+        justify-content: space-around;
+        background-color: $grey;
+        height: 69px;
+        border-radius: 5px;
+        &:hover{
+            box-shadow: $shadow;
+        }
+        & input{
+            background-color: transparent;
+            border: none;
+            width: 90%;
+            outline: none;
+        }
+        & img{
+            cursor: pointer;
+        }
+    }
+    &__dropdowns{
+        display: flex;
+        margin-top: 4%;
+    }
+}
