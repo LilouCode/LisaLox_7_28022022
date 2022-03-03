@@ -4,16 +4,24 @@
   height: 364px;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 2px 3px 2px 1px #C7BEBE;
 }
 .card img {
   height: 178px;
   background-color: #C7BEBE;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
 .card__body {
   display: flex;
   flex-direction: column;
   padding: 2% 3%;
   background-color: #E7E7E7;
+  border-radius: 0 0 5px 5px;
 }
 .card__header {
   display: flex;
@@ -74,6 +82,10 @@
   background-color: #68D9A4;
 }
 
+#logo {
+  animation: entrance 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 .tag {
   height: 37px;
   width: 107px;
@@ -94,6 +106,8 @@
 }
 
 #grid {
+  display: flex;
+  flex-wrap: wrap;
   margin: 4% 0;
 }
 
@@ -123,9 +137,24 @@
 }
 .search__dropdowns {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 4%;
 }
 
+@keyframes entrance {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 body {
   box-sizing: border-box;
   font-family: "lato", sans-serif;

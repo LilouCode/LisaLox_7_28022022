@@ -3,15 +3,23 @@
     height: 364px;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: $shadow;
+    }
     & img{
         height: 178px;
         background-color: $linseed;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
     }
     &__body{
         display: flex;
         flex-direction: column;
         padding: 2% 3%;
         background-color: $grey;
+        border-radius: 0 0 5px 5px;
     }
     &__header{
         display: flex;
