@@ -1,3 +1,8 @@
+#search-dropdowns{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4%;
+}
 .search{
     display: flex;
     flex-direction: column;
@@ -20,10 +25,5 @@
         & img{
             cursor: pointer;
         }
-    }
-    &__dropdowns{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 4%;
     }
 }

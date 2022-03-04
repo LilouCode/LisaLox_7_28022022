@@ -11,9 +11,9 @@
     <link href="./css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" type="image/png" href="./assets/favicon.svg"
   />
-    <script src="./script/data/recipes.js" defer></script>
+    <!-- <script  src="./script/data/recipes.js" defer></script> -->
     <script src="./script/utils/dropdown.js" defer></script>
-    <script src="./script/index.js"></script>
+    <script type="module" src="./script/index.js"></script>
   </head>
   <body>
     <header>
@@ -35,31 +35,35 @@
               </button>
             </div>
 
-            <div class="search__dropdowns">
+            <div id="search-dropdowns">
             
-              <div class="dropdown">
-                <button id="dropdown-ingredients" class="dropdown__btn" onclick="">
+              <div class="dropdown" id="dropdown-ingredients">
+                <button id="dropdown-ingredients-button" class="dropdown__btn" onclick="openDropdown()">
                 Ingrédients
               </button>
-                <div id="content-ingredients" class="dropdown__content">
+                <div id="content-ingredients" class="dropdown__content dropdown__content--ingredients none">
+                  <input class="dropdown__input" id="input-ingredients" type="text" placeholder="Rechercher un ingrédient">
+                  <ul class="dropdown__list dropdown__list--ingredients" id="list-ingredients"></ul>
                 </div>
               </div>
 
-              <div class="dropdown">
-                <button id="dropdown-appareils" class="dropdown__btn" onclick="">
+              <div class="dropdown" id="dropdown-appareils">
+                <button id="dropdown-appareils-button" class="dropdown__btn" onclick="">
                   Appareils 
-
                 </button>
-                <div id="content-appareils" class="dropdown__content">
+                <div id="content-appareils" class="none dropdown__content dropdown__content--appareils">
+                    <input class="dropdown__input" id="input-appareil" type="text" placeholder="Rechercher un appareil">
+                    <ul class="dropdown__list dropdown__list--appareils" id="list-appareils"></ul>
                 </div>
               </div>
             
-              <div class="dropdown">
-                <button id="dropdown-ustensiles" class="dropdown__btn" onclick="">
+              <div class="dropdown" id="dropdown-ustensiles">
+                <button id="dropdown-ustensiles-button" class="dropdown__btn" onclick="">
                   Ustensiles 
-
                 </button>
-                <div id="content-ustensiles" class="dropdown__content">
+                <div id="content-ustensiles" class="none dropdown__content dropdown__content--ustensiles">
+                  <input class="dropdown__input" id="input-ustensiles" type="text" placeholder="Rechercher un ustensile">
+                  <ul class="dropdown__list dropdown__list--ustensiles" id="list-ustensiles"></ul>
                 </div>
               </div>
             </div>
