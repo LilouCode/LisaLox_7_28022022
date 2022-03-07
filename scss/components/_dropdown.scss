@@ -39,6 +39,15 @@
             opacity: 0.7;
         }
     }
+    &__close{
+        position: fixed;
+        right: 4%;
+        background: url('../assets/arrow-up.svg') no-repeat center;
+        height: 60px;
+        width: 60px;
+        border: transparent;
+        cursor: pointer;
+    }
     &__list{
         display: flex;
         // flex-direction: column;

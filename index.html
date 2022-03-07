@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="./assets/favicon.svg"
   />
     <!-- <script  src="./script/data/recipes.js" defer></script> -->
+    <script type="module" src="./script/components/grid.js"></script>
     <script src="./script/utils/dropdown.js" defer></script>
     <script type="module" src="./script/index.js"></script>
   </head>
@@ -43,6 +44,7 @@
               </button>
                 <div id="content-ingredients" class="dropdown__content dropdown__content--ingredients none">
                   <input class="dropdown__input" id="input-ingredients" type="text" placeholder="Rechercher un ingrédient">
+                  <button class="dropdown__close" onclick="closeDropdown()"></button>
                   <ul class="dropdown__list dropdown__list--ingredients" id="list-ingredients"></ul>
                 </div>
               </div>

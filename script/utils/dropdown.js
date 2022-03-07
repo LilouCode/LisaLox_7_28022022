@@ -1,5 +1,4 @@
 //DOM//
-
 const searchDropdown = document.getElementById('search-dropdowns');
 const dropdownIngredients = document.getElementById('dropdown-ingredients');
 const dropdownAppareils = document.getElementById('dropdown-appareils');
@@ -21,8 +20,8 @@ function closeDropdown(){
     dropdownIngredients.classList.remove('large');
     contentIngredients.classList.remove('visible');
 }
-window.onclick = function (event) {
-    if (!event.target.matches('#dropdown-ingredients-button')) {
-      closeDropdown();
-    }
-  };
+// window.onclick = function (event) {
+//     if (!event.target.matches('#dropdown-ingredients-button')) {
+//       closeDropdown();
+//     }
+//   };
