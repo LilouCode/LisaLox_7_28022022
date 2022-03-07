@@ -1,8 +1,5 @@
 import {recipes} from './data/recipes.js';
 
-//DOM
-
-//
 let listIngredients = [];
 console.table (recipes);
 recipes.forEach((recipes) =>{
