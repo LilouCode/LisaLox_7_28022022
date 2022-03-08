@@ -29,13 +29,34 @@ console.log(BackToListIngredients)
 //DOM//
 const listIngredientsDrop = document.getElementById('list-ingredients');
 //
+function createATag(item){
+  const tagZone = document.getElementById('search-tag');
+  const tag = document.createElement('button');
+  tag.classList.add('tag');
+  tag.classList.add('tag--ingredients')
+  tag.innerHTML = item;
+  tagZone.appendChild(tag);
+  tag.addEventListener('click', function(){
+    createAnIngredientItem(item);
+    tagZone.removeChild(tag);
+  })
+  return tagZone
+}
+
 function createAnIngredientItem(item){
-    const itemList = document.createElement('li');
+    const itemList = document.createElement('button');
     itemList.classList.add('dropdown__list__item')
     itemList.innerHTML = `${item} `;
+    itemList.setAttribute('id', item);
     listIngredientsDrop.appendChild(itemList);
+    itemList.addEventListener('click', function(){
+      createATag(item);
+      listIngredientsDrop.removeChild(itemList);
+    })
     return listIngredientsDrop
+    
 }
+
 BackToListIngredients.forEach((element) =>{
     createAnIngredientItem(element);
 })

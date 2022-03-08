@@ -29,7 +29,7 @@
                 <input type="text" placeholder="Rechercher une recette">
                 <img src="./assets/search.svg" alt="search" role="button" onclick="">
             </div>
-            <div class="search__tag">
+            <div id="search-tag" class="search__tag">
               <button class="tag tag--ingredients">
                 Coco
               </button>
@@ -44,7 +44,7 @@
                 <div id="content-ingredients" class="dropdown__content dropdown__content--ingredients none">
                   <input class="dropdown__input" id="input-ingredients" type="text" placeholder="Rechercher un ingrédient">
                   <button class="dropdown__close" onclick="closeDropdown()"></button>
-                  <ul class="dropdown__list dropdown__list--ingredients" id="list-ingredients"></ul>
+                  <div class="dropdown__list dropdown__list--ingredients" id="list-ingredients"></div>
                 </div>
               </div>
 

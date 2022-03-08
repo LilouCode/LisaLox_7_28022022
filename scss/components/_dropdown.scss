@@ -53,13 +53,18 @@
         // flex-direction: column;
         flex-wrap: wrap;
         list-style: none;
-        
         padding: 0;
         
         &__item{
             color: white;
-            margin: 3%;
-            width: 170px;
+            font-size: 18px;
+            font-family: "lato", sans-serif;
+            background-color: transparent;
+            border: transparent;
+            text-align: left;
+            margin: 2%;
+            width: 185px;
+            cursor: pointer;
         }
     }
 }
