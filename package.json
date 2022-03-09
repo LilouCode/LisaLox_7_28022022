@@ -2,10 +2,10 @@
     "name": "les-petits-plats",
     "version": "1.0.2",
     "description": "",
-    "main": "index.html",
+    "main": "./public/index.html",
     "scripts": {
-        "sass": "sass --watch ./scss/main.scss:./css/style.css --style expanded",
-        "sass-compress": "sass --watch ./scss/main.scss:./css/style.css --style compressed",
+        "sass": "sass --watch ./scss/main.scss:../css/style.css --style expanded",
+        "sass-compress": "sass --watch ./scss/main.scss:../css/style.css --style compressed",
         "lint": "eslint --max-warnings=0 .",
         "prettier": "prettier"
     },
