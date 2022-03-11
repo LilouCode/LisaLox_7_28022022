@@ -1,4 +1,6 @@
 import { recipes } from "./data/recipes.js";
+import {createCard, createListIngredients} from "./components/grid.js";
+
 
 let listIngredients = [];
 console.table(recipes);
@@ -56,4 +58,9 @@ function createAnIngredientItem(item) {
 
 BackToListIngredients.forEach((element) => {
   createAnIngredientItem(element);
+});
+
+recipes.forEach((recipes) => {
+  createCard(recipes);
+  createListIngredients(recipes);
 });

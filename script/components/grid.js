@@ -1,6 +1,6 @@
 import { recipes } from "../data/recipes.js";
 
-function createCard(recipes) {
+export function createCard(recipes) {
   console.log(recipes.ingredients);
   console.log(recipes.name);
   console.log(recipes.description);
@@ -24,7 +24,7 @@ function createCard(recipes) {
   grid.appendChild(card);
   return grid;
 }
-function createListIngredients(recipes) {
+export function createListIngredients(recipes) {
   const listDesIngredients = recipes.ingredients;
   const ul = document.getElementById("ingredients-" + recipes.id);
   listDesIngredients.forEach((listDesIngredients) => {
@@ -58,7 +58,4 @@ function createListIngredients(recipes) {
     ul.appendChild(item);
   });
 }
-recipes.forEach((recipes) => {
-  createCard(recipes);
-  createListIngredients(recipes);
-});
+
