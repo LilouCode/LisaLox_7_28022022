@@ -24,9 +24,9 @@ export function createCard(recipes) {
   grid.appendChild(card);
   return grid;
 }
-export function createListIngredients(recipes) {
-  const listDesIngredients = recipes.ingredients;
-  const ul = document.getElementById("ingredients-" + recipes.id);
+export function createListIngredients(objet) {
+  const listDesIngredients = objet.ingredients;
+  const ul = document.getElementById("ingredients-" + objet.id);
   listDesIngredients.forEach((listDesIngredients) => {
     const item = document.createElement("li");
     //pause regexp pour creer mon id sans espace
