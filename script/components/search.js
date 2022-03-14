@@ -1,5 +1,6 @@
 import { recipes } from "../data/recipes.js";
 import { createCard, createListIngredients } from "./grid.js";
+
 const searchBar = document.getElementById("search__input");
 searchBar.addEventListener("input", function () {
   const saisie = searchBar.value.toLocaleLowerCase();
@@ -8,6 +9,17 @@ searchBar.addEventListener("input", function () {
     grid.innerHTML = "";
     console.log(saisie);
     const results = [];
+    recipes.forEach((recipe) => {
+      if (
+        recipe.name.toLocaleLowerCase().includes(saisie) ||
+        recipe.description.toLocaleLowerCase().includes(saisie) ||
+        recipe.ingredients.some((i) => i.ingredient.toLocaleLowerCase().includes(saisie))
+      ) {
+        results.push(recipe);
+        return results;
+      }
+    });
+
     if (results.length > 0) {
       results.forEach((results) => {
         createCard(results);
