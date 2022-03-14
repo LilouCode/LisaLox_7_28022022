@@ -48,16 +48,15 @@ import { createCard, createListIngredients } from "./grid.js";
 // const newRecipes = oldRecipes.filter((oldRecipes) => oldRecipes.includes("co"));
 // console.log(newRecipes);
 // const test2 = recipes.ingredients.filter(recipes.ingredients => ingredients.ingredient.includes('sucre'));
-const recuperationIngredient = recipes.filter((recipes) =>
-  recipes.ingredients.filter((ingredients) => ingredients.ingredient.includes("sucre"))
-);
-console.log(recuperationIngredient);
-recipes.forEach((recipes) => {
-  const ingredients = recipes.ingredients;
-  ingredients.forEach((ingredients) => {
-    console.log(ingredients.ingredient);
-  });
-});
+// const recuperationIngredient = recipes.filter((recipes) =>
+//   recipes.ingredients.filter((ingredients) => ingredients.ingredient.includes("sucre"))
+// );
+// console.log(recuperationIngredient);
+
+// const ingredients = recipes.ingredients;
+// recipes.filter(recipes.ingredients.ingredients.includes("sucre"));
+// const test4 = recipes.filter((el) => el.ingredients.some((i) => i.ingredient.includes("Coco")));
+// console.log(test4);
 ///////////////////////////////////////////////////////////////////////////////
 const searchBar = document.getElementById("search__input");
 searchBar.addEventListener("input", function () {
@@ -67,7 +66,10 @@ searchBar.addEventListener("input", function () {
     grid.innerHTML = "";
     console.log(saisie);
     const results = recipes.filter(
-      (recipes) => recipes.name.toLocaleLowerCase().includes(saisie) || recipes.description.toLocaleLowerCase().includes(saisie)
+      (recipes) =>
+        recipes.name.toLocaleLowerCase().includes(saisie) ||
+        recipes.description.toLocaleLowerCase().includes(saisie) ||
+        recipes.ingredients.some((i) => i.ingredient.toLocaleLowerCase().includes(saisie))
     );
     if (results.length > 0) {
       results.forEach((results) => {
