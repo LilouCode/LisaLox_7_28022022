@@ -1,3 +1,5 @@
+import { recipes } from "../data/recipes.js";
+import { createCard, createListIngredients } from "./grid.js";
 const searchBar = document.getElementById("search__input");
 searchBar.addEventListener("input", function () {
   const saisie = searchBar.value.toLocaleLowerCase();
