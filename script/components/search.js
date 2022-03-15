@@ -1,5 +1,34 @@
 import { recipes } from "../data/recipes.js";
-import { createCard, createListIngredients } from "./grid.js";
+import { listIngredientsDrop, showElements} from "./searchTags.js";
+
+const searchBar = document.getElementById("search__input");
+searchBar.addEventListener("input", function () {
+  const saisie = searchBar.value.toLocaleLowerCase();
+  const messageNoResult = `<p id="message-no-result">Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>`;
+  if (searchBar.value.length >= 3) {
+    grid.innerHTML = "";
+    console.log(saisie);
+    const results = recipes.filter(
+      (recipes) =>
+        recipes.name.toLocaleLowerCase().includes(saisie) ||
+        recipes.description.toLocaleLowerCase().includes(saisie) ||
+        recipes.ingredients.some((i) => i.ingredient.toLocaleLowerCase().includes(saisie))
+    );
+    if (results.length > 0) {
+      listIngredientsDrop.innerHTML = "";
+      showElements(results)
+    } else {
+      grid.innerHTML = messageNoResult;
+      listIngredientsDrop.innerHTML="";
+    }
+  } else {
+    if (grid.innerHTML === "" || messageNoResult) {
+      grid.innerHTML = "";
+      listIngredientsDrop.innerHTML="";
+      showElements(recipes)
+    }
+  }
+});
 
 ///////////////////////// Zone de Test ///////////////
 // const testEnCours = [
@@ -58,34 +87,3 @@ import { createCard, createListIngredients } from "./grid.js";
 // const test4 = recipes.filter((el) => el.ingredients.some((i) => i.ingredient.includes("Coco")));
 // console.log(test4);
 ///////////////////////////////////////////////////////////////////////////////
-const searchBar = document.getElementById("search__input");
-searchBar.addEventListener("input", function () {
-  const saisie = searchBar.value.toLocaleLowerCase();
-  const messageNoResult = `<p id="message-no-result">Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.</p>`;
-  if (searchBar.value.length >= 3) {
-    grid.innerHTML = "";
-    console.log(saisie);
-    const results = recipes.filter(
-      (recipes) =>
-        recipes.name.toLocaleLowerCase().includes(saisie) ||
-        recipes.description.toLocaleLowerCase().includes(saisie) ||
-        recipes.ingredients.some((i) => i.ingredient.toLocaleLowerCase().includes(saisie))
-    );
-    if (results.length > 0) {
-      results.forEach((results) => {
-        createCard(results);
-        createListIngredients(results);
-      });
-    } else {
-      grid.innerHTML = messageNoResult;
-    }
-  } else {
-    if (grid.innerHTML === "" || messageNoResult) {
-      grid.innerHTML = "";
-      recipes.forEach((recipes) => {
-        createCard(recipes);
-        createListIngredients(recipes);
-      });
-    }
-  }
-});
