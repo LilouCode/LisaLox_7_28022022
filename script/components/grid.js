@@ -1,5 +1,3 @@
-import { recipes } from "../data/recipes.js";
-
 export function createCard(recipes) {
   console.log(recipes.ingredients);
   console.log(recipes.name);
