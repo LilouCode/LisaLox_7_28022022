@@ -1,4 +1,7 @@
-import { recipes } from "./data/recipes.js";
-import {createCard, createListIngredients} from "./components/grid.js";
-
-
+export function trierParOdreAlphabethique(a, b) {
+  if (a.toLowerCase() < b.toLowerCase()) {
+    return -1;
+  } else if (a.toLowerCase() > b.toLowerCase()) {
+    return 1;
+  }
+}

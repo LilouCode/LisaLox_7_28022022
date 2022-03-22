@@ -15,6 +15,12 @@
     &--ingredients{
         background-color: $blue;
     }
+    &--appareils{
+        background-color: $red;
+    }
+    &--ustensiles{
+        background-color: $green;
+    }
     &:hover{
         box-shadow: $shadow;
     }

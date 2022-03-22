@@ -1,5 +1,4 @@
-import { recipes } from "../data/recipes.js";
-import { createCard, createListIngredients } from "./grid.js";
+import { trierParOdreAlphabethique } from "../index.js";
 
 //DOM
 export const listIngredientsDrop = document.getElementById("list-ingredients");
@@ -10,6 +9,7 @@ export const tableauTagsIngredients = [];
 export let listIngredients = [];
 export let FinalListIngredients = [];
 let sortedListIngredients = [];
+
 
 //Fonctions
 
@@ -27,13 +27,7 @@ export function MakeTheIngredientsList(objet) {
   const uniqueSetIngredients = new Set(listIngredients);
   sortedListIngredients = [...uniqueSetIngredients];
   //tri par odre alphabétique
-  function trierParOdreAlphabethique(a, b) {
-    if (a.toLowerCase() < b.toLowerCase()) {
-      return -1;
-    } else if (a.toLowerCase() > b.toLowerCase()) {
-      return 1;
-    }
-  }
+  
   sortedListIngredients.sort(trierParOdreAlphabethique);
   FinalListIngredients = sortedListIngredients;
   if (tableauTagsIngredients.length > 0) {
@@ -49,6 +43,7 @@ export function MakeTheIngredientsList(objet) {
   return FinalListIngredients;
 }
 
+
 inputDropIngredients.addEventListener("input", function () {
   let saisieDropIngredients = inputDropIngredients.value.toLocaleLowerCase();
   console.log(saisieDropIngredients);
@@ -63,7 +58,7 @@ inputDropIngredients.addEventListener("input", function () {
   console.log("FinalListIngredients: " + FinalListIngredients);
 });
 // Création d'un élément Tag du DOM à partir d'un évenement (click dans la liste des ingrédients)
-function createATag(item) {
+export function createATag(item) {
   //DOM
   const tagZone = document.getElementById("search-tag"); //repère dans le DOM
   const tag = document.createElement("button"); //création
@@ -88,7 +83,7 @@ function createATag(item) {
 }
 
 // création d'un bouton dans la zone de selection des tag (dropdown) pour chaque ingrédients à partir de la liste des ingrédients:
-function createAnIngredientItem(item) {
+export function createAnIngredientItem(item) {
   const itemList = document.createElement("button");
   itemList.classList.add("dropdown__list__item");
   itemList.innerHTML = `${item} `;
@@ -100,23 +95,3 @@ function createAnIngredientItem(item) {
   });
   return listIngredientsDrop;
 }
-
-//création de la liste + créations des Cards avec affichage des éléments dans la grid
-export function showElements(objet) {
-  // départ
-  grid.innerHTML = "";
-  listIngredients = [];
-  listIngredientsDrop.innerHTML = "";
-  //reprise
-  MakeTheIngredientsList(objet);
-  console.log(FinalListIngredients);
-  FinalListIngredients.forEach((element) => {
-    createAnIngredientItem(element);
-  });
-  objet.forEach((el) => {
-    createCard(el);
-    createListIngredients(el);
-  });
-}
-
-showElements(recipes);
