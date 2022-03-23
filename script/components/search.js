@@ -21,10 +21,18 @@ searchBar.addEventListener("input", function () {
     console.log(saisie);
     const results = [];
     for (let i = 0; i < recipes.length; i++) {
-      
+      let ingredients = recipes[i].ingredients;
+      const ingredient = function () {
+        for (let a = 0; a < ingredients.length; a++) {
+          return ingredients[a].ingredient.toLocaleLowerCase();
+        }
+      };
+      console.log(ingredients);
       if (
         nativeSearch(recipes[i].name.toLocaleLowerCase(), saisie) == 1 ||
-        nativeSearch(recipes[i].description.toLocaleLowerCase(), saisie) == 1 ){
+        nativeSearch(recipes[i].description.toLocaleLowerCase(), saisie) == 1 ||
+        nativeSearch(ingredient(), saisie) == 1
+      ) {
         const ajout = results.length;
         results[ajout] = recipes[i];
       }
