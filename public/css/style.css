@@ -94,14 +94,22 @@
   display: flex;
   flex-direction: column;
   width: 667px;
-  background-color: #3282F7;
   padding: 0;
   height: 397px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.dropdown__input {
+.dropdown__content--ingredients {
   background-color: #3282F7;
+}
+.dropdown__content--appareils {
+  background-color: #ED6454;
+}
+.dropdown__content--ustensiles {
+  background-color: #68D9A4;
+}
+.dropdown__input {
+  background-color: transparent;
   border: none;
   padding: 3%;
   outline: none;
@@ -171,6 +179,12 @@
 }
 .tag--ingredients {
   background-color: #3282F7;
+}
+.tag--appareils {
+  background-color: #ED6454;
+}
+.tag--ustensiles {
+  background-color: #68D9A4;
 }
 .tag:hover {
   box-shadow: 2px 3px 2px 1px #C7BEBE;
