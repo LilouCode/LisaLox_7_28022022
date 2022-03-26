@@ -41,6 +41,8 @@ export function createListIngredients(objet) {
       unit = "c.s";
     } else if (listDesIngredients.unit === "cuillère à café" || listDesIngredients.unit === "cuillères à café") {
       unit = "c.c";
+    } else if(listDesIngredients.unit === "Litres" || listDesIngredients.unit === "litres" || listDesIngredients.unit === "litre"){
+      unit = "L"
     } else {
       unit = listDesIngredients.unit;
     }
